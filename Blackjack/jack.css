@@ -1,0 +1,13 @@
+body.dark-mode {
+    background-color: #121212;
+    color: peachpuff;
+}
+.dark-mode span {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+}
+.dark-mode input, .dark-mode button {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #555555;
+}

@@ -11,6 +11,8 @@ let Pmoney = document.getElementById("money");
 
 let fDiv = document.getElementById("fDiv");
 
+let darkMode = document.getElementById("darkMode");
+
 Pmoney.textContent = money;
 
 if(bet === 0) {
@@ -76,4 +78,14 @@ if(bet === 0) {
         fDiv.appendChild(betBR);
         fDiv.appendChild(betSpan);
 
+
 }
+
+darkMode.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+
+    localStorage.setItem(
+        'darkMode',
+        document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled'
+    )
+});
