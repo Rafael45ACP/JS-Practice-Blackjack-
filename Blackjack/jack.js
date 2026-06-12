@@ -15,7 +15,69 @@ let darkMode = document.getElementById("darkMode");
 
 Pmoney.textContent = money;
 
-if(bet === 0) {
+const deck = [
+    // Hearts
+    { suit: "Hearts", rank: "A", value: 11 },
+    { suit: "Hearts", rank: "2", value: 2 },
+    { suit: "Hearts", rank: "3", value: 3 },
+    { suit: "Hearts", rank: "4", value: 4 },
+    { suit: "Hearts", rank: "5", value: 5 },
+    { suit: "Hearts", rank: "6", value: 6 },
+    { suit: "Hearts", rank: "7", value: 7 },
+    { suit: "Hearts", rank: "8", value: 8 },
+    { suit: "Hearts", rank: "9", value: 9 },
+    { suit: "Hearts", rank: "10", value: 10 },
+    { suit: "Hearts", rank: "J", value: 10 },
+    { suit: "Hearts", rank: "Q", value: 10 },
+    { suit: "Hearts", rank: "K", value: 10 },
+
+    // Diamonds
+    { suit: "Diamonds", rank: "A", value: 11 },
+    { suit: "Diamonds", rank: "2", value: 2 },
+    { suit: "Diamonds", rank: "3", value: 3 },
+    { suit: "Diamonds", rank: "4", value: 4 },
+    { suit: "Diamonds", rank: "5", value: 5 },
+    { suit: "Diamonds", rank: "6", value: 6 },
+    { suit: "Diamonds", rank: "7", value: 7 },
+    { suit: "Diamonds", rank: "8", value: 8 },
+    { suit: "Diamonds", rank: "9", value: 9 },
+    { suit: "Diamonds", rank: "10", value: 10 },
+    { suit: "Diamonds", rank: "J", value: 10 },
+    { suit: "Diamonds", rank: "Q", value: 10 },
+    { suit: "Diamonds", rank: "K", value: 10 },
+
+    // Clubs
+    { suit: "Clubs", rank: "A", value: 11 },
+    { suit: "Clubs", rank: "2", value: 2 },
+    { suit: "Clubs", rank: "3", value: 3 },
+    { suit: "Clubs", rank: "4", value: 4 },
+    { suit: "Clubs", rank: "5", value: 5 },
+    { suit: "Clubs", rank: "6", value: 6 },
+    { suit: "Clubs", rank: "7", value: 7 },
+    { suit: "Clubs", rank: "8", value: 8 },
+    { suit: "Clubs", rank: "9", value: 9 },
+    { suit: "Clubs", rank: "10", value: 10 },
+    { suit: "Clubs", rank: "J", value: 10 },
+    { suit: "Clubs", rank: "Q", value: 10 },
+    { suit: "Clubs", rank: "K", value: 10 },
+
+    // Spades
+    { suit: "Spades", rank: "A", value: 11 },
+    { suit: "Spades", rank: "2", value: 2 },
+    { suit: "Spades", rank: "3", value: 3 },
+    { suit: "Spades", rank: "4", value: 4 },
+    { suit: "Spades", rank: "5", value: 5 },
+    { suit: "Spades", rank: "6", value: 6 },
+    { suit: "Spades", rank: "7", value: 7 },
+    { suit: "Spades", rank: "8", value: 8 },
+    { suit: "Spades", rank: "9", value: 9 },
+    { suit: "Spades", rank: "10", value: 10 },
+    { suit: "Spades", rank: "J", value: 10 },
+    { suit: "Spades", rank: "Q", value: 10 },
+    { suit: "Spades", rank: "K", value: 10 },
+];
+
+//if(bet === 0) {
     let betInput = document.createElement("input");
     let betBTN = document.createElement("button");
     betBTN.textContent = "Place Bet!";
@@ -79,7 +141,9 @@ if(bet === 0) {
         fDiv.appendChild(betSpan);
 
 
-}
+//}
+
+
 
 darkMode.addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
@@ -89,3 +153,10 @@ darkMode.addEventListener('click', function () {
         document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled'
     )
 });
+
+function startGame(){
+    let randomIndex = Math.floor(Math.random() * deck.length);
+    let card = deck.splice(randomIndex, 1)[0];
+
+    
+}
